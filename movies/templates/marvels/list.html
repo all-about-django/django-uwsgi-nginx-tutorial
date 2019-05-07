@@ -2,4 +2,13 @@
 
 {% block container %}
 <h2>Marvel movies list</h2>
+
+<ul>
+{% for movie in movies %}
+    <li>
+        {{movie.name}}
+        (<i>{{movie.year}}</i>)
+    </li>
+{% endfor %}
+</ul>
 {% endblock %}
