@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from marvel.views import get_marvel_movies
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('movies/marvel', get_marvel_movies, name='marvel-movies-list'),
 ]
